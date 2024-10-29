@@ -9,14 +9,14 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{%static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{%static 'css/bootstrap.css' %}">
 
-    <link rel="stylesheet" href="{%static 'vendors/iconly/bold.css'%}">
+    <link rel="stylesheet" href="{%static 'vendors/iconly/bold.css' %}">
 
-    <link rel="stylesheet" href="{%static 'vendors/perfect-scrollbar/perfect-scrollbar.css'%}'%}">
-    <link rel="stylesheet" href="{%static 'vendors/bootstrap-icons/bootstrap-icons.css'%}">
-    <link rel="stylesheet" href="{%static 'css/app.css'%}">
-    <link rel="shortcut icon" href="{%static 'images/favicon.svg'%}" type="image/x-icon">
+    <link rel="stylesheet" href="{%static 'vendors/perfect-scrollbar/perfect-scrollbar.css' %}">
+    <link rel="stylesheet" href="{%static 'vendors/bootstrap-icons/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{%static 'css/app.css' %}">
+    <link rel="shortcut icon" href="{%static 'images/favicon.png' %}" type="image/x-icon">
 </head>
 
 <body>
@@ -331,6 +331,9 @@
                                 <li class="submenu-item ">
                                     <a href="auth-forgot-password.html">Forgot Password</a>
                                 </li>
+                                <li class="submenu-item ">
+                                    <a><button class="btn" id="logout-button">Logout</button></a>
+                                </li>
                             </ul>
                         </li>
 
@@ -488,7 +491,7 @@
                                                     <svg class="bi text-primary" width="32" height="32" fill="blue"
                                                         style="width:10px">
                                                         <use
-                                                            xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
+                                                            xlink:href="{& static 'vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill'%}" />
                                                     </svg>
                                                     <h5 class="mb-0 ms-3">Europe</h5>
                                                 </div>
@@ -506,7 +509,7 @@
                                                     <svg class="bi text-success" width="32" height="32" fill="blue"
                                                         style="width:10px">
                                                         <use
-                                                            xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
+                                                            xlink:href="{% static 'vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill'%}" />
                                                     </svg>
                                                     <h5 class="mb-0 ms-3">America</h5>
                                                 </div>
@@ -524,7 +527,7 @@
                                                     <svg class="bi text-danger" width="32" height="32" fill="blue"
                                                         style="width:10px">
                                                         <use
-                                                            xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
+                                                            xlink:href="{% static 'vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill'%}" />
                                                     </svg>
                                                     <h5 class="mb-0 ms-3">Indonesia</h5>
                                                 </div>
@@ -558,7 +561,7 @@
                                                         <td class="col-3">
                                                             <div class="d-flex align-items-center">
                                                                 <div class="avatar avatar-md">
-                                                                    <img src="assets/images/faces/5.jpg">
+                                                                    <img src="{% static 'images/faces/5.jpg'%}">
                                                                 </div>
                                                                 <p class="font-bold ms-3 mb-0">Si Cantik</p>
                                                             </div>
@@ -571,7 +574,7 @@
                                                         <td class="col-3">
                                                             <div class="d-flex align-items-center">
                                                                 <div class="avatar avatar-md">
-                                                                    <img src="assets/images/faces/2.jpg">
+                                                                    <img src="{% static 'images/faces/2.jpg' %}">
                                                                 </div>
                                                                 <p class="font-bold ms-3 mb-0">Si Ganteng</p>
                                                             </div>
@@ -595,7 +598,7 @@
                             <div class="card-body py-4 px-5">
                                 <div class="d-flex align-items-center">
                                     <div class="avatar avatar-xl">
-                                        <img src="assets/images/faces/1.jpg" alt="Face 1">
+                                        <img src="{% static 'images/faces/1.jpg' %}" alt="Face 1">
                                     </div>
                                     <div class="ms-3 name">
                                         <h5 class="font-bold">John Duck</h5>
@@ -611,7 +614,7 @@
                             <div class="card-content pb-4">
                                 <div class="recent-message d-flex px-4 py-3">
                                     <div class="avatar avatar-lg">
-                                        <img src="assets/images/faces/4.jpg">
+                                        <img src="{% static 'images/faces/4.jpg' %}">
                                     </div>
                                     <div class="name ms-4">
                                         <h5 class="mb-1">Hank Schrader</h5>
@@ -620,7 +623,7 @@
                                 </div>
                                 <div class="recent-message d-flex px-4 py-3">
                                     <div class="avatar avatar-lg">
-                                        <img src="assets/images/faces/5.jpg">
+                                        <img src="{% static 'images/faces/5.jpg' %}">
                                     </div>
                                     <div class="name ms-4">
                                         <h5 class="mb-1">Dean Winchester</h5>
@@ -629,7 +632,7 @@
                                 </div>
                                 <div class="recent-message d-flex px-4 py-3">
                                     <div class="avatar avatar-lg">
-                                        <img src="assets/images/faces/1.jpg">
+                                        <img src="{% static 'images/faces/1.jpg' %}">
                                     </div>
                                     <div class="name ms-4">
                                         <h5 class="mb-1">John Dodol</h5>
@@ -669,11 +672,31 @@
     </div>
     <script src="{%static 'vendors/perfect-scrollbar/perfect-scrollbar.min.js'%}"></script>
     <script src="{%static 'js/bootstrap.bundle.min.js'%}"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{%static 'vendors/apexcharts/apexcharts.js'%}"></script>
     <script src="{%static 'js/pages/dashboard.js'%}"></script>
 
     <script src="{%static 'js/main.js'%}"></script>
+    <SCript>
+        document.getElementById('logout-button').addEventListener('click', function () {
+    Swal.fire({
+        title: 'Are You Sure?',
+        text: 'You will lose your current session',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',  // Corregido
+        cancelButtonColor: '#d33',      // Corregido
+        confirmButtonText: 'Yes, Bye',
+        cancelButtonText: 'No'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = '/logout/';  // Corregido el uso de url tag
+        }
+    });
+});
+
+    </SCript>
+    <script> src="{% static 'js/alerts/alert_logout.js'%}"</script>
 </body>
 
 </html>

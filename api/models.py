@@ -14,4 +14,4 @@ class usuarios (models.Model):
     
     class Meta:
         db_table= "usuarios"        
-# Create your models here.
+# Create your models here. 

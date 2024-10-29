@@ -1,0 +1,1 @@
+LOGING_URL = "/login"
